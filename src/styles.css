@@ -1,0 +1,349 @@
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+
+@media screen and (max-width: 640px) { /*Mòbil*/
+    header {
+        background-color: #333; /*fons del menú*/
+        color: #fff; /*color de text del menú*/
+        display: flex; /*per a posar els elements en línia*/
+        align-items: center; /*per a centrar els elements verticalment*/
+        justify-content: space-between; /*per a separar els elements igualment*/
+        padding: 10px 20px; /*espaiament al voltant del menú*/
+        position: fixed; /*per a fer el menú sticky*/
+        top: 0; /*per a fixar el menú a la part superior*/
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    #headolimpiades::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(images/Barcelona-1992.jpg);
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.5);
+        z-index: -1;
+    }
+    
+    nav {
+        display: flex; /*per a posar els elements en línia*/
+        justify-content: center; /*per a centrar els elements en línia*/
+        flex-grow: 1; /*per a estendre els enllaços*/
+    }
+    
+    nav ul {
+        list-style-type: none; /*per a eliminar la numeració de la llista*/
+        margin: 0; /*per a eliminar el marge dels costats*/
+        padding: 0; /*per a eliminar l'espai interior de la llista*/
+        display: flex; /*per a posar els elements en línia*/
+        justify-content: center; /*per a centrar els elements en línia*/
+        align-items: center; /*per a centrar els elements verticalment*/
+        flex-grow: 1; /*per a estendre els enllaços*/
+    }
+    
+    nav a {
+        color: #fff; /*color dels enllaços*/
+        text-decoration: none; /*per a eliminar el subratllat dels enllaços*/
+        font-size: 16px; /*mida de text dels enllaços*/
+        flex-grow: 1; /*per a estendre els enllaços*/
+        padding: 30px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    nav img, footer img {
+        width: 10vw;
+    }
+
+    .contingut, .contingut-main{
+        margin-top: 18%;
+    }
+
+    #clip-image {
+        height: 70vh; /* l'alçada serà del 100% de la vista */
+        overflow: hidden; /* per a evitar que l'imatge s'escapin dels límits */
+        background-image: url("https://api.time.com/wp-content/uploads/2023/03/Worlds-Greatest-Places-Barcelona-Spain.jpg");
+        background-size: cover;
+        background-position: center;
+        -webkit-clip-path: ellipse(50% 50% at 50% 50%);
+        clip-path: ellipse(50% 50% at 50% 50%);
+        z-index: 0;
+    }
+
+    footer {
+        margin-top: 10%;
+        text-align: center;
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+@media screen and (min-width: 641px) { /*Desktop*/
+    nav {
+        position: fixed; /* fixa la barra lateral */
+        top: 0; /* la col·loca a dalt */
+        left: 0; /* la col·loca a l'esquerra */
+        height: 100vh; /* la fa ocupar tota l'alçada de la pantalla */
+        width: 20%; /* la fa ocupar el 20% de l'amplada de la pantalla */
+        background-color: #333;  /*fons del menú */
+        color: #fff; /* color de text del menú */
+        padding: 20px; /* espaiament interior */
+        box-sizing: border-box; /* inclou padding i border en el càlcul dels dimensions */
+    }
+
+    #navolimpiades::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(images/Barcelona-1992.jpg);
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.5);
+        z-index: -1;
+    }
+        
+    nav ul {
+        list-style-type: none; /* elimina la numeració de la llista */
+        margin: 0;
+        padding: 0;
+    }
+        
+    nav li {
+        margin-bottom: 50px; /* espaiament entre elements */
+    }
+        
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: calc(25vw / 10);
+        font-family: "Montserrat", sans-serif;
+    }
+
+    nav img, footer img {
+        width: 12vw;
+    }
+
+    .contingut-main {
+        margin-left: 20%;
+    }
+
+    .contingut {
+        margin-left: 25%;
+        margin-right: 5%;
+        margin-top: 1.5%;
+    }
+    
+    #clip-image {
+        height: 100vh;
+        overflow: hidden;
+        /*background-image: url("https://api.time.com/wp-content/uploads/2023/03/Worlds-Greatest-Places-Barcelona-Spain.jpg");*/
+        background-image: url("https://www.uniquetoursfactory.com/city-tours-magazine/wp-content/uploads/2016/01/barcelone1.jpg");
+        background-size: cover;
+        background-position: center;
+        -webkit-clip-path: polygon(0% 100%, 12% 38%, 27% 71%, 33% 19%, 40% 60%, 49% 0%, 60% 60%, 66% 19%, 73% 71%, 88% 38%, 100% 100%);
+        clip-path: polygon(0% 100%, 12% 38%, 27% 71%, 33% 19%, 40% 60%, 49% 0%, 60% 60%, 66% 19%, 73% 71%, 88% 38%, 100% 100%);
+    }
+
+    footer {
+        margin-left: 25%;
+        margin-top: 5%;
+        text-align: center;
+        position: relative;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+p, li, h1, h2, a {
+    font-family: "Montserrat", sans-serif;
+}
+
+.timeline {
+    margin-left: 50px; /* mou la llista cap a la dreta per deixar espai per a la línia vertical */
+    padding: 0; /* elimina el padding de la llista */
+    position: relative; /* necessari per poder situar la línia vertical */
+    list-style-type: none;
+}
+  
+.timeline li {
+    margin-bottom: 20px; /* separació entre elements de la llista */
+    padding-left: 30px; /* mou el text cap a la dreta per deixar espai per a la línia vertical */
+}
+
+.timeline li img {
+    width: 20vw;
+    padding-right: 10px;
+}
+  
+.timeline li:before {
+    content: ""; /* necessari per crear un element buit per a la línia vertical */
+    width: 2px; /* amplada de la línia vertical */
+    height: 100%; /* fa que la línia vertical ocupi tot l'espai vertical disponible */
+    background-color: black; /* color de la línia vertical */
+    position: absolute; /* necessari per situar la línia vertical a la dreta del text */
+    top: 0; /* situem la línia vertical a dalt de tot */
+    left: 0; /* situem la línia vertical a l'esquerra de l'element pare (la llista) */
+}
+
+.imatge-detall {
+    padding: 10px;
+    text-align: center;
+}
+
+.imatge-detall img {
+    max-width: 250px;
+    height: auto;
+}
+.imatge-detall p {
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.enllac li {
+    margin-bottom: 20px;
+}
+
+.shape {
+    width: 100px;
+    height: 100px;
+    background-color: #FFC107;
+    transition: all 1s ease;
+}
+
+  .shape.circle {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.animacio {
+    display: flex;
+    justify-content: center;
+}
+
+.animacio svg {
+    fill: black;
+}
+
+.animacio svg .white {
+    fill: white;
+}
+
+.animacio svg circle.cercle1 {
+    animation-name: moure1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.animacio svg .cercle2 {
+    animation-name: moure2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.animacio svg .cercle3 {
+    animation-name: moure3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.animacio svg .cercle4 {
+    animation-name: moure4;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.animacio svg .ring.black {
+    animation-name: canviarRadi;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.animacio svg .ring.white {
+    animation-name: canviarRadi2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moure1 {
+    0%, 100%{
+      transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0px, 100px);
+    }
+    50% {
+      transform: translate(100px, 100px);
+    }
+    75% {
+        transform: translate(100px, 0px);
+    }
+}
+
+@keyframes moure2 {
+    0%, 100%{
+      transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, 0px);
+    }
+    50% {
+      transform: translate(100px, -100px);
+    }
+    75% {
+        transform: translate(0px, -100px);
+    }
+}
+
+@keyframes moure3 {
+    0%, 100%{
+      transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-100px, 0px);
+    }
+    50% {
+      transform: translate(-100px, 100px);
+    }
+    75% {
+        transform: translate(0px, 100px);
+    }
+}
+
+@keyframes moure4 {
+    0%, 100%{
+      transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0px, -100px);
+    }
+    50% {
+      transform: translate(-100px, -100px);
+    }
+    75% {
+        transform: translate(-100px, 0px);
+    }
+}
+
+@keyframes canviarRadi {
+    0%, 100% {
+      r: 55;
+    }
+    50% {
+      r: 70;
+    }
+}
+
+@keyframes canviarRadi2 {
+    0%, 100% {
+      r: 40;
+    }
+    50% {
+      r: 55;
+    }
+}
